@@ -65,7 +65,9 @@ ROBOTSTXT_OBEY = False
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    'imges360.pipelines.MongoPipeline': 300
+    'imges360.pipelines.ImagePipeline': 300,
+    'imges360.pipelines.MongoPipeline': 301,
+    'imges360.pipelines.MysqlPipeline': 302
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -92,3 +94,9 @@ ITEM_PIPELINES = {
 MAX_PAGE = 50
 MONGO_URI = 'localhost'
 MONGO_DB = 'images360'
+
+MYSQL_HOST = 'localhost'
+MYSQL_DATABASE = 'images360'
+MYSQL_PORT = 3306
+MYSQL_USER = 'root'
+MYSQL_PASSWORD = 'root'
