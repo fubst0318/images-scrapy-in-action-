@@ -70,7 +70,7 @@ class MysqlPipeline():
 
     def process_item(self, item, spider):
         data = dict(item)
-        keys = ', '.join(data.keys)
+        keys = ', '.join(data.keys())
         print(keys)
         values = ', '.join(['%s'] * len(data))
         print(values)
